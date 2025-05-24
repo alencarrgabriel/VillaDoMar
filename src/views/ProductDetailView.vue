@@ -26,4 +26,4 @@ export default defineComponent({
   name: "ProductDetailView",
   components: { DefaultLayout },
 });
-</script>
+</script> 

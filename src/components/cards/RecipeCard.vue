@@ -1,24 +1,22 @@
 <template lang="html">
     <router-link
         :to="{ name: 'recipesDetails', params: { id: `${recipeItem.strMeal.toLowerCase().split(' ').join('-')}-${recipeItem.idMeal}` } }"
-        class="bg-white shadow-lg flex flex-col gap-5 rounded overflow-hidden hover:-translate-y-4 transition duration-300 ease-in-out justify-between">
-        <div class="flex-1">
+        class="bg-white shadow hover:shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out flex flex-col h-full">
+        <div>
             <img :src="recipeItem.strMealThumb"
-                alt=""
-                srcset=""
-                class="h-48 object-cover w-full">
+                :alt="recipeItem.strMeal"
+                class="h-52 w-full object-cover">
         </div>
-        <div class="py-4 px-5 flex-1 flex flex-col justify-between">
-            <h4 class="text-2xl font-bold mb-5 text-center">{{ recipeItem.strMeal }}</h4>
-
-
-            <router-link
-                :to="{ name: 'recipesDetails', params: { id: `${recipeItem.strMeal.toLowerCase().split(' ').join('-')}-${recipeItem.idMeal}` } }"
-                class="bg-green-600 text-white px-8 py-4 rounded-lg  hover:bg-green-700 transition duration-300 ease-in-out w-full mb-5 block text-center">
-                See Recipe Details</router-link>
-
+        <div class="p-5 flex flex-col flex-grow">
+            <h4 class="text-xl font-bold text-primary mb-4">{{ recipeItem.strMeal }}</h4>
+            
+            <div class="mt-auto">
+                <router-link
+                    :to="{ name: 'recipesDetails', params: { id: `${recipeItem.strMeal.toLowerCase().split(' ').join('-')}-${recipeItem.idMeal}` } }"
+                    class="bg-primary text-white px-6 py-2 rounded hover:bg-primary-dark transition duration-300 ease-in-out w-full block text-center">
+                    Ver Detalhes</router-link>
+            </div>
         </div>
-
     </router-link>
 </template>
 

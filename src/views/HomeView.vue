@@ -1,9 +1,10 @@
 <template>
   <DefaultLayout>
     <HomeHero />
-    <HomeFoodOfTheDay />
-    <HomePopularFoods />
-    <HomeFeaturedRecipes />
+    <HomeCategoriesSection />
+    <HomeQualityBanner />
+    <HomeFeaturedProducts />
+    <HomeBusinessServices />
   </DefaultLayout>
 </template>
 
@@ -11,12 +12,20 @@
 import { defineComponent } from "vue";
 import DefaultLayout from "@/components/layouts/DefaultLayout.vue";
 import HomeHero from "@/components/partials/HomeHero.vue";
-import HomePopularFoods from "@/components/partials/HomePopularFoods.vue";
-import HomeFoodOfTheDay from "@/components/partials/HomeFoodOfTheDay.vue";
-import HomeFeaturedRecipes from "@/components/partials/HomeFeaturedRecipes.vue";
+import HomeCategoriesSection from "@/components/partials/HomeCategoriesSection.vue";
+import HomeQualityBanner from "@/components/partials/HomeQualityBanner.vue";
+import HomeFeaturedProducts from "@/components/partials/HomeFeaturedProducts.vue";
+import HomeBusinessServices from "@/components/partials/HomeBusinessServices.vue";
 
 export default defineComponent({
   name: "HomeView",
-  components: { DefaultLayout, HomeHero, HomePopularFoods, HomeFoodOfTheDay, HomeFeaturedRecipes },
+  components: { 
+    DefaultLayout, 
+    HomeHero, 
+    HomeCategoriesSection, 
+    HomeQualityBanner, 
+    HomeFeaturedProducts, 
+    HomeBusinessServices
+  },
 });
 </script>

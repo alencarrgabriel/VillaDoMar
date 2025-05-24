@@ -2,6 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Importar estilos de cores personalizados */
+@import './colors.css';
+
 body {
   font-family: "KoHo", sans-serif;
+  color: #4B5563;
+  background-color: #FFF5E5;
+}
+
+/* Sobrescreve cores do Tailwind com nossa paleta */
+.text-primary {
+  color: #E85D04 !important;
+}
+
+.text-secondary {
+  color: #2A9D8F !important;
+}
+
+.text-accent {
+  color: #FF9E4F !important;
+}
+
+.bg-primary {
+  background-color: #E85D04 !important;
+}
+
+.bg-secondary {
+  background-color: #2A9D8F !important;
+}
+
+.bg-tertiary {
+  background-color: #FFEDCB !important;
+}
+
+.bg-tertiary-light {
+  background-color: #FFF5E5 !important;
+}
+
+.bg-accent {
+  background-color: #FF9E4F !important;
+}
+
+.hover\:bg-primary-dark:hover {
+  background-color: #DC2F02 !important;
+}
+
+.hover\:bg-secondary-dark:hover {
+  background-color: #1A6B60 !important;
+}
+
+.hover\:bg-accent-dark:hover {
+  background-color: #FF7E21 !important;
+}
+
+.hover\:text-primary:hover {
+  color: #E85D04 !important;
+}
+
+.hover\:text-secondary:hover {
+  color: #2A9D8F !important;
+}
+
+.hover\:text-accent:hover {
+  color: #FF9E4F !important;
 }

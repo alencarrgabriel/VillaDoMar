@@ -11,80 +11,52 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/about",
     name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: "/recipes",
-    name: "recipes",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: "/produtos",
+    name: "produtos",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/RecipesView.vue"),
+      import(/* webpackChunkName: "produtos" */ "../views/ProductsView.vue"),
   },
   {
-    path: "/recipes/:id",
-    name: "recipesDetails",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: "/produto/:id",
+    name: "produto-detalhes",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/RecipeDetailView.vue"),
+      import(/* webpackChunkName: "produto-detalhe" */ "../views/ProductDetailView.vue"),
   },
   {
-    path: "/recipes/category/:name",
-    name: "recipesCategories",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: "/cardapio",
+    name: "cardapio",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/RecipeCategoryView.vue"),
-  },
-  {
-    path: "/download",
-    name: "download",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/DownloadView.vue"),
+      import(/* webpackChunkName: "cardapio" */ "../views/CardapioView.vue"),
   },
   {
     path: "/contact",
     name: "contact",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/ContactView.vue"),
+      import(/* webpackChunkName: "contact" */ "../views/ContactView.vue"),
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior() {
     // always scroll to top
     return { top: 0 };
   },
 });
 
 router.beforeEach((to, from, next) => {
-  if (to.name === "recipesDetails") {
+  if (to.name === "produto-detalhes") {
     const routerParamsId = to.params.id as string;
-    const routerParamsArr = routerParamsId.split("-");
-
-    document.title = `${Capitalize(
-      routerParamsArr.slice(0, routerParamsArr.length - 1).join(" ")
-    )} - FoodMood`;
-  } else if (to.name === "recipesCategories") {
-    document.title = `${Capitalize(String(to.params.name))} Recipes - FoodMood`;
+    document.title = `Produto - Villa do Mar`;
+  } else if (to.name === "cardapio") {
+    document.title = `Cardápio Digital - Villa do Mar`;
   } else {
-    document.title = `${Capitalize(String(to.name))} - FoodMood`;
+    document.title = `${Capitalize(String(to.name))} - Villa do Mar`;
   }
 
   next();
