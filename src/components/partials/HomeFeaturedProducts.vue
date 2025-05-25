@@ -48,7 +48,7 @@ export default defineComponent({
         {
           title: 'Camarão Rosa G',
           description: 'Camarão rosa grande, limpo e congelado. Ideal para pratos especiais.',
-          image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80',
+          image: require('@/assets/produtos/camaroes/camarao-rosa-g.jpg'),
           price: 'R$ 89,90',
           unit: '500g',
           category: 'Camarões'
@@ -56,7 +56,7 @@ export default defineComponent({
         {
           title: 'Filé de Salmão',
           description: 'Filé de salmão fresco, sem espinhas. Perfeito para grelhados e assados.',
-          image: 'https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+          image: require('@/assets/produtos/peixes/file-de-salmao.jpg'),
           price: 'R$ 69,90',
           unit: '500g',
           category: 'Peixes'
@@ -64,7 +64,7 @@ export default defineComponent({
         {
           title: 'Polvo Inteiro Limpo',
           description: 'Polvo limpo e congelado, pronto para o preparo de diversas receitas.',
-          image: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+          image: require('@/assets/produtos/frutos-do-mar/polvo.jpg'),
           price: 'R$ 79,90',
           unit: '1kg',
           category: 'Frutos do Mar'
@@ -72,7 +72,7 @@ export default defineComponent({
         {
           title: 'Lula em Anéis',
           description: 'Anéis de lula limpos e congelados, prontos para fritar ou preparar em molhos.',
-          image: 'https://plus.unsplash.com/premium_photo-1664648005416-73436faa96b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80',
+          image: require('@/assets/produtos/frutos-do-mar/lula-em-aneis.jpg'),
           price: 'R$ 49,90',
           unit: '500g',
           category: 'Frutos do Mar'

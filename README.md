@@ -1,7 +1,7 @@
 # Villa do Mar - Website
 
 ## Descrição
-O Villa do Mar é um site de e-commerce especializado em frutos do mar, oferecendo uma experiência completa para compra de produtos marinhos premium. O projeto foi desenvolvido a partir da transformação de um template Vue.js original (FoodMood), adaptando-o para um negócio de venda de pescados e frutos do mar, similar ao Frumar.com.br.
+O Villa do Mar é um site de e-commerce especializado em frutos do mar, oferecendo uma experiência completa para compra de produtos marinhos premium. O projeto foi desenvolvido com foco em proporcionar uma experiência moderna e intuitiva para os clientes que buscam pescados e frutos do mar de alta qualidade.
 
 ## Tecnologias Utilizadas
 - Vue.js 3
@@ -9,7 +9,7 @@ O Villa do Mar é um site de e-commerce especializado em frutos do mar, oferecen
 - Vue Router
 - Tailwind CSS
 - FontAwesome (para ícones)
-- LocalStorage (para armazenamento de preferências do cliente)
+- SessionStorage (para armazenamento de preferências do cliente)
 
 ## Funcionalidades Principais
 - **Modal de seleção de tipo de cliente**: Permite diferenciar entre Pessoa Física e Pessoa Jurídica
@@ -19,6 +19,8 @@ O Villa do Mar é um site de e-commerce especializado em frutos do mar, oferecen
 - **Responsividade completa**: Layout adaptado para desktop e dispositivos móveis
 - **Vendas via WhatsApp**: Botão flutuante e integração direta para pedidos via WhatsApp
 - **Tema personalizado**: Identidade visual com cores que remetem a frutos do mar frescos e ambiente praiano
+- **Animações suaves**: Transições e efeitos visuais para melhor experiência do usuário
+- **Design moderno**: Interface limpa e profissional com elementos visuais atraentes
 
 ## Como executar o projeto localmente
 

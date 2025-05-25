@@ -29,8 +29,8 @@ export default defineComponent({
     }
   },
   created() {
-    // Verificar se o usuário já fez uma escolha anteriormente
-    const clientSelection = localStorage.getItem('villaDoMar_clientSelection');
+    // Verificar se o usuário já fez uma escolha na sessão atual
+    const clientSelection = sessionStorage.getItem('villaDoMar_clientSelection');
     if (clientSelection) {
       const selection = JSON.parse(clientSelection) as ClientSelection;
       this.clientType = selection.type;
@@ -52,8 +52,8 @@ export default defineComponent({
       this.clientType = selection.type;
       this.clientOption = selection.option;
       
-      // Salvar a seleção no localStorage
-      localStorage.setItem('villaDoMar_clientSelection', JSON.stringify(selection));
+      // Salvar a seleção no sessionStorage
+      sessionStorage.setItem('villaDoMar_clientSelection', JSON.stringify(selection));
       
       // Redirecionar com base na seleção
       if (selection.type === 'pf' && selection.option === 'menu') {
